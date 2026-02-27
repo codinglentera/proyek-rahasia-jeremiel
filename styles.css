@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #1a1a1a;
+  color: #fff;
+  overflow: hidden;
+}
+
+#game-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#ui-panel {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 250px;
+  max-height: 90vh;
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid #00FF00;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 12px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+#player-info {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #00FF00;
+}
+
+#player-name {
+  color: #00FF00;
+  margin-bottom: 5px;
+}
+
+#player-coords {
+  color: #888;
+  font-size: 11px;
+}
+
+#inventory {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #00FF00;
+}
+
+#inventory h4 {
+  color: #00FF00;
+  margin-bottom: 8px;
+}
+
+#inventory-slots {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4px;
+  margin-bottom: 10px;
+}
+
+.inventory-slot {
+  width: 30px;
+  height: 30px;
+  background: #222;
+  border: 1px solid #00FF00;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 10px;
+  transition: all 0.2s;
+}
+
+.inventory-slot:hover {
+  background: #333;
+  box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
+
+.inventory-slot.selected {
+  background: #00FF00;
+  color: #000;
+  font-weight: bold;
+}
+
+#chat {
+  display: flex;
+  flex-direction: column;
+}
+
+#chat h4 {
+  color: #00FF00;
+  margin-bottom: 8px;
+}
+
+#chat-messages {
+  max-height: 150px;
+  overflow-y: auto;
+  margin-bottom: 8px;
+  background: #0a0a0a;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #00FF00;
+}
+
+.chat-message {
+  margin-bottom: 5px;
+  font-size: 11px;
+  color: #00FF00;
+}
+
+.chat-message .player-name {
+  color: #FFD700;
+  font-weight: bold;
+}
+
+#chat-input {
+  padding: 5px;
+  background: #222;
+  border: 1px solid #00FF00;
+  color: #00FF00;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+#chat-input:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
