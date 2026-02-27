@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growtopia Sandbox Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+</head>
+<body>
+    <div id="game-container"></div>
+    <div id="ui-panel">
+        <div id="player-info">
+            <h3 id="player-name">Player</h3>
+            <p id="player-coords">X: 0, Y: 0</p>
+        </div>
+        <div id="inventory">
+            <h4>Inventory</h4>
+            <div id="inventory-slots"></div>
+        </div>
+        <div id="chat">
+            <h4>Chat</h4>
+            <div id="chat-messages"></div>
+            <input type="text" id="chat-input" placeholder="Say something...">
+        </div>
+    </div>
+
+    <script src="game.js" type="module"></script>
+</body>
+</html>
